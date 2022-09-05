@@ -1,9 +1,25 @@
-const ItemListContainer = ({saludo}) => {
+import React,{useState, useEffect} from 'react'
+import {productos} from '../../mock/productos'
+import {ItemList} from '../ItemList/ItemList'
+
+const ItemListContainer = () => {
+
+	const [productList, setProductList] = useState([])
+
+	const getProductos = () => new Promise ((res, eject) =>{
+		setTimeout(()=> res(productos) ,2000)
+		
+	})
+
+	useEffect(()=>{
+		getProductos()
+		.then(productos => setProductList(productos))
+		.catch(error => alert('ERROR'))
+	},[])
 		return (
-				  <>
-            <h2>{saludo}</h2>
-            <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Error laborum at omnis minima, voluptatem vitae facilis, non cupiditate culpa id illum voluptatum distinctio illo, atque consectetur ad doloremque dolor quisquam.</p>
-          </>
+				
+           
+            <ItemList productList={productList}/>
 
 			);
 };

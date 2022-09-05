@@ -8,7 +8,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 
 const App = () => {
-  const saludo = 'Bienvenidos a Colombia'
+ 
   const onAdd = () =>{
       
           alert('PRODUCTO AGREGADO !');
@@ -18,9 +18,9 @@ const App = () => {
 return(
       <> 
         <Header/>
-        <ItemCount stock={10} inicial={1} onAdd={onAdd}/>
+        
         <Main/>
-        <ItemListContainer saludo={saludo}/>
+        <ItemListContainer/>
         <Footer/>
       </>
 );

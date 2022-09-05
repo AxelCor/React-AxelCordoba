@@ -1,0 +1,41 @@
+.divCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardContainer{
+    margin: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+	width: 18rem;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.img{
+  margin:10px auto;
+  border-radius:5px;
+  border: 1px solid #999;
+  width:220px;
+  height:220px;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.ItemCount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    text-align: center;
+}
