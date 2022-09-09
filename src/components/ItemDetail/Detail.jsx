@@ -4,7 +4,7 @@ import './ItemDetail.css'
 
 export const Detail = ({
 
-	
+		id = '1',
 		title = 'asd',
 		img ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEPk2oPCL3lf3wOu2f1TYczcbXWQqVghhLw&usqp=CAU',
 		price= 600,
@@ -21,7 +21,6 @@ export const Detail = ({
 	
 		return (
 				 <div className='detailContainer'>
-					 
 					 <div><img className='img'src={img} alt='Imagen-Producto'/></div>
 					 <div className='divDetail'>
 					 <h4>{title}</h4>

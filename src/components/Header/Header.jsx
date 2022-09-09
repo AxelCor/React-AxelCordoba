@@ -1,5 +1,6 @@
 import {CartWidget} from './CartWidget';
 import './Header.css'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
 		return (<>
@@ -8,10 +9,10 @@ const Header = () => {
     <div className="headerContainer">
       <div className="headerContainerDiv"> 
         <ul className="headerUl">
-          <li><a href="index.html" className="ulLi">INICIO</a></li>
-          <li><a href="./pages/indumentaria.html" className="ulLi1">Indumentaria</a></li>
-          <li><a href="./pages/comprando.html" className="ulLi1">Ofertas</a></li>
-          <li><a href="./pages/contacto.html" className="ulLi1">Contacto</a></li>
+          <li><Link className="ulLi" to='/' > INICIO</Link></li>
+          <li><Link className="ulLi1" to='/category/Gorras' > Gorras</Link></li>
+          <li><Link className="ulLi1" to='/category/Remeras' > Remeras</Link></li>
+          <li><Link className="ulLi1" to='/category/Jeans' > Jeans</Link></li>
         </ul>
         <div className='flex'>
         <form className="headerForm">
@@ -20,7 +21,7 @@ const Header = () => {
         <div>
           <a href="./pages/usuario.html"><button type="button" className="headerP">Perfil</button></a>
           <a href="./pages/login.html"><button type="button" className="headerL">Login</button></a> 
-        </div><CartWidget/>
+        </div>  <CartWidget/>
         </div>
       </div>
     </div>

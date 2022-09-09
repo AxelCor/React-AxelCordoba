@@ -38,6 +38,7 @@ Header{
   padding-left: 0.5rem;
   display: block;
   text-decoration: none;
+  font-size: x-large;
 }
 
 .ulLi1{
@@ -47,11 +48,13 @@ Header{
   padding-left: 0.5rem;
   display: block;
   text-decoration: none;
+  font-size: x-large;
 }
 
 .headerForm{
   margin-right: 1rem;
   width: auto;
+  font-size: x-large;
 }
 
 .headerForm1{
@@ -65,6 +68,7 @@ Header{
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    font-size: x-large;
 }
 
 .flex{
@@ -85,6 +89,7 @@ Header{
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    font-size: x-large;
 }
 
 .headerL{
@@ -101,11 +106,15 @@ Header{
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    font-size: x-large;
 }
 
 .material-icons{
   color: white;
+  font-size: 50px;
+
 }
 .spanCarrito{
   color: white;
+  font-size: x-large;
 }
