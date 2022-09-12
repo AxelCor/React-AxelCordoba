@@ -8,14 +8,11 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {cart} from './components/cart/cart';
 
 const App = () => {
  
-  const onAdd = () =>{
-      
-          alert('PRODUCTO AGREGADO !');
-      return () => {};
-  }
+  
 
 return(
       <BrowserRouter> 
@@ -23,8 +20,8 @@ return(
         <Main/>
         <Routes>
         <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/cart' element={<cart/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-      
         <Route path='/Item/:itemId' element={<ItemDetailContainer/>}/>
         </Routes>
       </BrowserRouter>

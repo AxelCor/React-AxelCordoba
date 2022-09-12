@@ -6,7 +6,8 @@ export const ItemDetail = ({productoList}) => {
 
 
 		return (
-				 <div className='x'>{
+				 <div className='x'>
+				 {
 				 	<Detail key={productoList.id}
 				 	img={productoList.img}
 				 	title={productoList.title}

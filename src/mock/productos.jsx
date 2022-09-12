@@ -20,7 +20,7 @@ export const productos = [
 		title:'jean Mujer',
 		description:'Jean elastizado',
 		price:7500,
-		stock:10,
+		stock:5,
 		category:'Jeans',
 		img: 'https://static.zara.net/photos///2022/S/0/1/p/1193/102/407/2/w/274/1193102407_6_1_1.jpg?ts=1657883790603'}
 ];

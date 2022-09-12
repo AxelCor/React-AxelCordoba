@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+import {Link} from 'react-router-dom'
 
 export const Detail = ({
 
@@ -12,10 +13,13 @@ export const Detail = ({
 		category='text',
 		stock=10}) => {
 
-			const onAdd = () =>{
-		      
-		          alert('PRODUCTO AGREGADO !');
-		    return () => {};
+			const [cantidad, setCantidad] = useState(0);
+
+			const onAdd = (cant) =>{
+				setCantidad(cant);
+		      	
+		         
+	
   }
 	
 	
@@ -26,7 +30,11 @@ export const Detail = ({
 					 <h4>{title}</h4>
 					 <p>{description}</p>
 					 <p className='price'>$ {price}</p>
-					 <ItemCount stock={stock} inicial={1} onAdd={onAdd}/>
+					 {cantidad > 0 
+		      			? <Link to='/cart'>
+					 		<button>Ver Carrito</button>
+				  		  </Link>
+		      			: <ItemCount stock={stock} inicial={0} onAdd={onAdd}/>}
 					 </div>
 				 </div>
 
