@@ -30,11 +30,11 @@ export const Detail = ({
 					 <h4>{title}</h4>
 					 <p>{description}</p>
 					 <p className='price'>$ {price}</p>
-					 {cantidad > 0 
-		      			? <Link to='/cart'>
+					 {cantidad === 0 
+		      			? <ItemCount stock={stock} inicial={0} onAdd={onAdd}/>
+		      			: <Link to='/Cart'>
 					 		<button>Ver Carrito</button>
-				  		  </Link>
-		      			: <ItemCount stock={stock} inicial={0} onAdd={onAdd}/>}
+				  		  </Link>}
 					 </div>
 				 </div>
 
