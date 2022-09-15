@@ -1,6 +1,7 @@
 import React from 'react'
 import {useContext} from 'react';
 import {CartContext} from '../../context/CartContext';
+import '../ItemDetail/ItemDetail.css'
 
 
 export const Cart = () => {
@@ -8,11 +9,22 @@ export const Cart = () => {
 
 		return (
 				<div>
-          <h1>Carrito</h1>
-          <p>tu compra</p>
+          
           {cart.map((prod)=>(
-            <div key={prod.id}>
-              <h2>{prod.title}</h2>
+            
+              <div className='detailContainer' key={prod.id}>
+           <div><img className='img'src={prod.img} alt='Imagen-Producto'/></div>
+           <div className='divDetail'>
+           <h4>{prod.title}</h4>
+           <p>{prod.description}</p>
+           <p>{prod.cantidad}</p>
+           <p className='price'>$ {prod.price}</p>
+           
+           </div>
+         
+
+
+
               <button onClick={() => eliminarProd(prod.id)}>
                 Eliminar Producto
               </button>
@@ -22,3 +34,4 @@ export const Cart = () => {
           </div>
 			);
   };
+
