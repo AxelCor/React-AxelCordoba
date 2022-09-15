@@ -21,7 +21,7 @@ const Header = () => {
         <div>
           <a href="./pages/usuario.html"><button type="button" className="headerP">Perfil</button></a>
           <a href="./pages/login.html"><button type="button" className="headerL">Login</button></a> 
-        </div>  <CartWidget/>
+        </div>  <Link className="ulLi1" to='/Cart'><CartWidget/></Link>
         </div>
       </div>
     </div>
