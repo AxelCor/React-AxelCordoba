@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-// import {Detail} from './Detail'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom'
@@ -8,13 +7,13 @@ import {CartContext} from '../../context/CartContext';
 
 
 
-export const ItemDetail = ({productoList}) => {
-	const [cantidad, setCantidad] = useState(0);
-	const {addToCart} = useContext(CartContext);
-
-	const onAdd = (cant) =>{
-				setCantidad(cant);
-		addToCart(productoList, cant)};
+	export const ItemDetail = ({productoList}) => {
+		const [cantidad, setCantidad] = useState(0);
+		const {addToCart} = useContext(CartContext);
+		const onAdd = (cant) =>{
+			setCantidad(cant);
+			addToCart(productoList, cant)
+		};
 
 			return (
 				 <div className='detailContainer' key={productoList.id}>
