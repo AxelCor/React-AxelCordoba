@@ -5,6 +5,28 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCTq27uVfNAuQ94g70ruePC7HfQGiSaPv0",
+  authDomain: "proyect-react-5aeaa.firebaseapp.com",
+  projectId: "proyect-react-5aeaa",
+  storageBucket: "proyect-react-5aeaa.appspot.com",
+  messagingSenderId: "236425357952",
+  appId: "1:236425357952:web:9c09631d05dc78a832d465"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />
 );

@@ -1,8 +1,29 @@
+import React, { useState } from 'react';
 import {CartWidget} from './CartWidget';
 import './Header.css'
 import {Link} from 'react-router-dom'
+import { useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../index';
 
-const Header = () => {
+const Header = (props) => {
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        const collectionCat = collection(db, 'categorias');
+
+        getDocs(collectionCat).then((res) => {
+            const categorias = res.docs.map((cat) => {
+                return {
+                    id: cat.id,
+                    ...cat.data(),
+                };
+            });
+            setCategories(categorias);
+        });
+    }, []);
+
+
 		return (<>
 	
   <header>
