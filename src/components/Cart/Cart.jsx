@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {CartContext} from '../../context/CartContext';
 import '../ItemDetail/ItemDetail.css'
-
+import Form from '../Form/Form';
 
 export const Cart = () => {
     const [idCompra, setIdCompra] = useState('');
@@ -14,7 +14,7 @@ export const Cart = () => {
     };
 
     if (idCompra) {
-        return <h1>Gracias por tu compra! Vuelvas Prontos...</h1>;
+        return <h1>Gracias por tu compra! El id de tu compra es: {idCompra}. Vuelvas Prontos...</h1>;
     }
 
     if (cart.length === 0) {
@@ -40,9 +40,6 @@ export const Cart = () => {
            <p className='price'>$ {prod.price}</p>
            
            </div>
-         
-
-
 
               <button onClick={() => eliminarProd(prod.id)}>
                 Eliminar Producto
@@ -52,7 +49,12 @@ export const Cart = () => {
              <div>
               <button onClick={clearCart}><h4>Limpiar Carrito</h4></button>
               <h4>Total: ${total}</h4>
-              <button onClick={codCompra}><h4>Finalizar Compra</h4></button>
+              
+              <Form
+                cart={cart}
+                total={total}
+                codCompra={codCompra}
+                />
               </div>
           </div>
 			);
