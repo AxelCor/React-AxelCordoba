@@ -4,12 +4,8 @@ import {createContext, useState} from 'react';
 
 
 export const CartContext = createContext();
-
-
 export const CartProvider = ({children}) => {
 	const [cart, setCart] = useState([]);
-	const [unidades, setUnidades] = useState(0);
-
 	const addToCart = (productoList, cantidad) => {
 		if (isInCart(productoList.id)){
 			
@@ -19,9 +15,11 @@ export const CartProvider = ({children}) => {
 		}
 	};
 
+
 	const isInCart = (id) => {
 		return cart.some ((prod) => prod.id === id)
 	};
+
 
 	const sumarCantidad = (productoList, cantidad) =>{
 		const carritoNew = cart.map((prod)=>{
@@ -44,9 +42,11 @@ export const CartProvider = ({children}) => {
 		setCart(carritoFiltrado); 
 	};
 
-const clearCart = () => {
-	setCart([]);
-};
+
+	const clearCart = () => {
+		setCart([]);
+	};
+
 
 	const totalPrice = () => {
         let acumulador = 0;
@@ -56,6 +56,7 @@ const clearCart = () => {
         return acumulador;
     };
 
+
     const totalQuantity = () => {
         let acumulador = 0;
         cart.forEach((prod) => {
@@ -63,14 +64,16 @@ const clearCart = () => {
         });
         return acumulador;
     };
+
+
     const getProductQuantity = (id) => {
         const product = cart.find((prod) => prod.id === id);
         return product?.cantidad;
     };
     useEffect(() => {
-        totalQuantity();
-       
+        totalQuantity(0);  
     }, [cart]);
+
 
 return (
 		<CartContext.Provider
@@ -88,4 +91,3 @@ return (
 
 	);
 };
-		

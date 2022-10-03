@@ -20,7 +20,7 @@ const Form = ({ cart, total, clearCart, codCompra }) => {
 
         addDoc(ordersCollection, order).then((res) => {
             codCompra(res.id);
-            clearCart();
+            clearCart(0);
             
         });
     };
@@ -69,3 +69,4 @@ const Form = ({ cart, total, clearCart, codCompra }) => {
 };
 
 export default Form;
+

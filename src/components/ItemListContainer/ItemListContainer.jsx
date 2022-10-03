@@ -1,20 +1,19 @@
 import React,{useState, useEffect} from 'react'
-import {productos} from '../../mock/productos'
 import {ItemList} from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
+import ScaleLoader from 'react-spinners/ScaleLoader';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../index';
+import '../ItemDetail/ItemDetail.css'
 
 const ItemListContainer = () => {
 
 	const [productList, setProductList] = useState([])
+	const [isLoading, setIsLoading] = useState(true);
 	const {categoryId} = useParams();
 
-
-	
-
 	useEffect(()=>{
-
+		setIsLoading(true);
 		const itemCollection = collection(db, 'items');
 
 		const referencia = categoryId
@@ -34,29 +33,22 @@ const ItemListContainer = () => {
             .catch((error) => {
                 console.log(error);
             })
+            .finally(() => {
+                setIsLoading(false);
+            });
             
     }, [categoryId]);
-
-	// 	const getProductos = () =>
-	// 	 new Promise ((res, eject) =>{
-	// 	 	const prodFiltrados = productos.filter(
-	// 	 		(prod) => prod.category === categoryId
-	// 	 		);
-	// 	 	const resProd = categoryId ? prodFiltrados : productos;
-
-	// 	setTimeout(()=> {res(resProd)
-	// 		;}, 1)
-	// })
-
-	// 	getProductos()
-	// 	.then(productos => setProductList(productos))
-	// 	.catch(error => alert('ERROR'))
-	// },[categoryId])
 		return (
-				
-           
-            <ItemList productList={productList}/>
-
+			<>
+			{isLoading ? (
+                <> <div className='loading'><ScaleLoader color="black" height={80} margin={20} width={25} radius={4} /></div>
+                </>
+            ) : (
+                <>
+                    <ItemList productList={productList}/>
+                </>
+            )}
+           </>
 			);
 };
 

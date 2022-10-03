@@ -47,3 +47,11 @@ p{
     border: 1px solid #999;
         padding: 10px;
 }
+
+.loading{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 250px;
+}

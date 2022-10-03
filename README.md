@@ -1,3 +1,9 @@
-Bienvenido !
+# **Bienvenido a React-Dispo!**
 
-Integrando rutas, vas a poder navegar libremente por todas las categorias y ver detalles de los productos.
+Utilizando las funcionalidades de React, se logro crear la app Dispo, con un poco de diseño.
+
+### Librerias utilizadas
+
+- React Router Dom
+- Firebase
+- React Spinners

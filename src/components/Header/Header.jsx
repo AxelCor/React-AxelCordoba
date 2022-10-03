@@ -40,8 +40,8 @@ const Header = (props) => {
           <input type="search" className="headerForm1" placeholder="Busqueda.." aria-label="Search"></input>
         </form>
         <div>
-          <a href="./pages/usuario.html"><button type="button" className="headerP">Perfil</button></a>
-          <a href="./pages/login.html"><button type="button" className="headerL">Login</button></a> 
+          <a href="/"><button type="button" className="headerP">Perfil</button></a>
+          <a href="/"><button type="button" className="headerL">Login</button></a> 
         </div>  <Link className="ulLi1" to='/Cart'><CartWidget/></Link>
         </div>
       </div>

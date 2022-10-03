@@ -15,7 +15,7 @@ export const Cart = () => {
 
     if (idCompra) {
         return <h1>Gracias por tu compra! El id de tu compra es: {idCompra}. Vuelvas Prontos...</h1>;
-    }
+            }
 
     if (cart.length === 0) {
         return (
