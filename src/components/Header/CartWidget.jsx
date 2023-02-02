@@ -10,10 +10,11 @@ export const CartWidget = () => {
 
 		return (
     <>
-
-		<span className='material-icons'>shopping_cart</span>
-				<span className='spanCarrito'>{totalprod}</span>
-			</>);
+		<div className='flex'>
+			<div className='material-icons'>shopping_cart</div>
+			<div className='spanCarrito'>{totalprod}</div>
+		</div>
+	</>);
 };
 
 
