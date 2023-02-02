@@ -1,10 +1,9 @@
-![Dispo](https://user-images.githubusercontent.com/82520303/216210992-7c7e3958-d717-4549-be86-c6855c642784.jpg)
+![Dispo (2)](https://user-images.githubusercontent.com/82520303/216211376-b9e2d74c-0eb2-420e-947c-9ede63d17aed.jpg)
 # **Bienvenido a React-Dispo!**
 
-Utilizando las funcionalidades de React, se logró crear la app Dispo.
+Utilizando las funcionalidades de React, se logró crear la app Dispo(*Tienda online de ropa con 3 articulos disponibles*).
 
-*Tienda online de ropa con 3 articulos disponibles*
-html+css+js+react+node+firebase
+- html+css+js+react+node+firebase
 
 Caracteristicas:
 - Elegir articulo y ver detalle de producto.
