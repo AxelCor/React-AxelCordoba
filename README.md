@@ -1,4 +1,4 @@
-![LOGIN](https://user-images.githubusercontent.com/82520303/216210675-731aad2a-46ec-4e58-99b9-564ad666acdf.png)
+![Dispo](https://user-images.githubusercontent.com/82520303/216210992-7c7e3958-d717-4549-be86-c6855c642784.jpg)
 # **Bienvenido a React-Dispo!**
 
 Utilizando las funcionalidades de React, se logró crear la app Dispo.
@@ -23,5 +23,4 @@ Caracteristicas:
 - Firebase
 - React Spinners
   
-  
-![REACT](https://user-images.githubusercontent.com/82520303/216210600-9ea47e95-3432-48a3-b48f-19b07d8d2fd7.png)
+  ![REACTcertificado](https://user-images.githubusercontent.com/82520303/216211010-7b753a63-5581-4cda-97a3-751ce1fb0700.jpg)
